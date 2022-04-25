@@ -38,6 +38,8 @@ const matchRegexWithModel = (title, description) => {
             return key;
         }
     }
+    
+    return "Nespecificat";
 }
 
 const matchRegexWithColor = (title, description) => {
@@ -61,6 +63,8 @@ const matchRegexWithColor = (title, description) => {
             return key;
         }
     }
+    
+    return "Nespecificat";
 }
 
 const matchRegexWithState = (title, description) => {
@@ -75,6 +79,8 @@ const matchRegexWithState = (title, description) => {
             return key;
         }
     }
+    
+    return "Nespecificat";
 }
 
 const matchRegexWithType = (title, description) => {
@@ -89,11 +95,13 @@ const matchRegexWithType = (title, description) => {
             return key;
         }
     }
+    
+    return "Nespecificat";
 }
 
 const matchRegexWithYear = (title, description) => {
     if (title.match(/(19|20)\d{2}[^0-9]?/gmi) === null && description.match(/(19|20)\d{2}[^0-9]?/gmi) === null) {
-        return null;
+        return "Nespecificat";
     }
     return (title.match(/(19|20)\d{2}[^0-9]?/gmi) || description.match(/(19|20)\d{2}[^0-9]?/gmi))[0].slice(0, 4)
 }
@@ -140,6 +148,8 @@ const matchRegexWithProductType = (title, description) => {
             return key;
         }
     }
+    
+    return "Nespecificat";
 }
 
 module.exports = {
