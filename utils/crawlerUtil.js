@@ -58,7 +58,7 @@ const dataParse = async (url) => {
             const $_specific = cheerio.load(response.data);
 
             data.push(utilParse(el.attribs.href.includes("autovit"), $_specific, announce_data))
-            console.log(utilParse(el.attribs.href.includes("autovit"), $_specific, announce_data));
+            // console.log(utilParse(el.attribs.href.includes("autovit"), $_specific, announce_data));
         } catch (exception) {
             console.error(exception.toString());
         }
