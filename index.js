@@ -6,6 +6,7 @@ const join = require('path').join;
 const app = express();
 const utilGetInformation = require('./utils/crawlerUtil').getCrawledData;
 const models = join(__dirname, 'models');
+const cors = require('cors');
 
 dotenv.config();
 let instanceVariable = !(process.env.ENABLE_CRAWLING === "true");
@@ -14,6 +15,7 @@ fs.readdirSync(models)
     .filter(file => ~file.search(/^[^.].*\.js$/))
     .forEach(file => require(join(models, file)));
 
+app.use(cors())
 app.use(express.json());
 app.use('/announcements', async (req, res) => {
     if (!instanceVariable) {
