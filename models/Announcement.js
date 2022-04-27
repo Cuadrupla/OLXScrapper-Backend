@@ -12,6 +12,7 @@ const AnnouncementSchema = mongoose.Schema({
     culoare: { type: String, default: 'Nespecificat', trim: true },
     tip: { type: String, default: 'Nespecificat', trim: true },
     tipCarburant: { type: String, default: 'Nespecificat', trim: true },
+    negociable: { type: Boolean, default: false },
     img: { type: String, default: 'Nespecificat', trim: true },
     createdAt: { type: Date, default: Date.now }
 })

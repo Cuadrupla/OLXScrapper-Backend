@@ -62,7 +62,7 @@ function startExpressInstance() {
 }
 
 async function startCrawlingMethod() {
-    let finished = false, page = 25;
+    let finished = false, page = 23;
     const Announcement = mongoose.model('Announcement');
 
     while (!finished) {
